@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TextBox from "devextreme-react/text-box";
 import { Button } from "devextreme-react/button";
-import "../App.css";
+import "../../App.css";
 
 import axios from "axios";
 

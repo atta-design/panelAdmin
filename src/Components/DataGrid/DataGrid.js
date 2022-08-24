@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "devextreme/dist/css/dx.common.css";
 import "devextreme/dist/css/dx.light.css";
-import "../App.css";
+import "../../App.css";
 import DataGrid, { Column, Pager, Paging } from "devextreme-react/data-grid";
 import { Editing } from "devextreme-react/data-grid";
 import { Sorting } from "devextreme-react/data-grid";
