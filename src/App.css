@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.login_container{
+   margin-top: 50px;
+  margin-bottom: 30px;
+ 
+}
+.form_container{
+  margin: 0 auto;
+  width: 500px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  
+}
