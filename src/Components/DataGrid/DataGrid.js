@@ -9,7 +9,7 @@ const pageSizes = [10, 20];
 function Grid() {
   const [Link, setLink] = useState();
 
-  const felan = async () => {
+  const DataFecher = async () => {
     const resp = await fetch("https://api-portal.saeedsafaee.ir/Country/List");
     const data = await resp.json();
     const itemArray = data.content.items;
@@ -17,7 +17,7 @@ function Grid() {
     console.log(itemArray);
   };
   useEffect(() => {
-    felan();
+    DataFecher();
   }, []);
   return (
     <div className="App">

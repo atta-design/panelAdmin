@@ -14,10 +14,10 @@ function App() {
       {/* <Grid/> */}
       {/* <Buttons/> */}
       {/* <Login/> */}
-      <Indicators/>
+      {/* <Indicators/> */}
       {/* <Textbox/> */}
       {/* <TextBoxPassword/> */}
-      {/* <ToastComponent/> */}
+      <ToastComponent/>
     </div>
   );
 }

@@ -16,7 +16,7 @@ function ToastComponent() {
   return (
     <div id="container">
       <div id="buttons">
-        <Button text="Show custom message" onClick={showCustomMessage}></Button>
+        <Button text="Show custom message" onClick={showCustomMessage}/>
       </div>
       <Toast
         visible={isVisible}
