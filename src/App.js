@@ -12,7 +12,7 @@ import PostData from './managers/postData';
 import GetData from './managers/getData';
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* <Grid/> */}
       {/* <Buttons/> */}
       <Login/>

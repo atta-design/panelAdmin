@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import '../App.css'
 
 export default function GetData() {
   useEffect(() => {
@@ -10,7 +11,7 @@ export default function GetData() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1> GET DATA </h1>
     </div>
   );

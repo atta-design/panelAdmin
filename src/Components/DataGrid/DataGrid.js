@@ -20,7 +20,7 @@ function Grid() {
     DataFecher();
   }, []);
   return (
-    <div className="App">
+    <div className="container">
       <DataGrid
         showColumnLines={false}
         dataSource={Link}

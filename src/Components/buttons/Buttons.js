@@ -3,7 +3,7 @@ import { Button } from "devextreme-react/button";
 
 export default function Buttons() {
   return (
-    <div>
+    <div className="container">
       <div>
         <Button text="Login" type="normal" stylingMode="outlined" />
         <Button

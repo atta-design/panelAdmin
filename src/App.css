@@ -1,8 +1,7 @@
-.App {
-  text-align: center;
-}
 
-.login_container{
+.container{
+text-align: center;}
+/* .login_container{
    margin-top: 50px;
   margin-bottom: 30px;
  
@@ -16,4 +15,4 @@
   justify-content: center;
   padding: 20px;
   
-}
+} */

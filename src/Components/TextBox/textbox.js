@@ -3,7 +3,7 @@ import { TextBox } from "devextreme-react/text-box";
 
 export default function Textbox() {
   return (
-    <div>
+    <div className="container">
       <TextBox mode="email" label="username" width={300} />
     </div>
   );

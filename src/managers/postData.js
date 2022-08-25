@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button } from "devextreme-react/button";
-
+import '../App.css'
 export default function PostData() {
   const [value, setValue] = useState("email@test.com");
     
@@ -22,7 +22,7 @@ export default function PostData() {
       });
   };
   return (
-    <div>
+    <div className="container">
       <Button
         text="Login"
         type="default"

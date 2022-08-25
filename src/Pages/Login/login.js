@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import TextBox from "devextreme-react/text-box";
-import { Button } from "devextreme-react/button";
 import axios from "axios";
 
 export default function Login() {
@@ -45,6 +44,9 @@ export default function Login() {
           <div className="d-flex flex-column flex-lg-row-fluid">
             <div className="d-flex flex-row-fluid flex-center p-10">
               <div className="d-flex flex-column">
+              <a href="index.html" class="mb-15">
+								<img alt="Logo" src="assets/media/logos/logo-2-dark.svg" class="h-50px" />
+							</a>
                 <h1 className="text-dark fs-2x mb-3">خوش امدید</h1>
 
                 <div className="fw-bold fs-4 text-gray-400 mb-10">
@@ -55,7 +57,9 @@ export default function Login() {
               </div>
             </div>
 
-            <div className="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-200px min-h-xl-300px mb-xl-10"></div>
+            
+            <div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-200px min-h-xl-300px mb-xl-10" style={{backgroundImage:` url("assets/media/illustrations/networks.png")`}}></div>
+
           </div>
 
           <div className="flex-row-fluid d-flex flex-center justfiy-content-xl-first p-10">
@@ -65,6 +69,12 @@ export default function Login() {
                 noValidate="novalidate"
                 id="kt_free_trial_form"
               >
+                	<div class="text-center mb-10">
+								<h1 class="text-dark mb-3">در 30 روز رایگان آزمایش</h1>
+							
+								<div class="text-gray-400 fw-bold fs-4">سوالی دارید؟ 
+								<a href="#" className="link-primary fw-bolder">سوالات متداول</a>.</div>
+							</div>
                 <div className="text-center mb-10"></div>
                 <div className="fv-row mb-10">
                   <label className="form-label fw-bolder text-dark fs-6">
@@ -97,6 +107,7 @@ export default function Login() {
                         rtlEnabled={false}
                         validationStatus={isvalid}
                       />
+                      
                     </div>
                     <div
                       className="d-flex align-items-center mb-3"
@@ -107,18 +118,39 @@ export default function Login() {
                       <div className="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
                       <div className="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
                     </div>
+
                   </div>
 
-                
+                <div class="text-muted">از 8 حرف یا بیشتر با ترکیبی از حروف ، اعداد و نمادها استفاده کنید.</div>
                 </div>
-
+                <div class="fv-row mb-10">
+								<label class="form-label fw-bolder text-dark fs-6">تایید کلمه عبور</label>
+								<TextBox
+                        value={password}
+                        mode="password"
+                        maxLength={20}
+                        showClearButton={true}
+                        onValueChange={onPasswordChange}
+                        valueChangeEvent="input"
+                        rtlEnabled={false}
+                        validationStatus={isvalid}
+                      />
+							</div>
+              <div class="fv-row mb-10">
+								<label class="form-check form-check-custom form-check-solid form-check-inline mb-5">
+									<input class="form-check-input" type="checkbox" name="toc" value="1" />
+									<span class="form-check-label fw-bold text-gray-700">30  روز استفاده رایگان
+									{' '}<a href="#" className="link-primary ms-1">شرایط</a>.</span>
+								</label>
+							</div>
                 <div className="text-center pb-lg-0 pb-8">
-                  <Button
-                    text="Login"
-                    type="default"
-                    stylingMode="contained"
-                    onClick={Clickhandler}
-                  />
+                <div className="text-center pb-lg-0 pb-8">
+								<button type="button" id="kt_free_trial_submit" class="btn btn-lg btn-primary fw-bolder" onClick={Clickhandler}>
+									<span class="indicator-label">ساختن اکانت</span>
+									<span class="indicator-progress">لطفا صبر کنید...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+								</button>
+							</div>
                 </div>
               </form>
             </div>
