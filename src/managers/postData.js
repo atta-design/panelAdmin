@@ -1,34 +1,21 @@
-import React, { useState } from "react";
 import axios from "axios";
-import { Button } from "devextreme-react/button";
-import '../App.css'
-export default function PostData() {
-  const [value, setValue] = useState("email@test.com");
-    
-  
-  const [password, setPassword] = useState("100100");
 
-  const Clickhandler = () => {
-    axios
-      .post("https://api-portal.saeedsafaee.ir/Account/Login", {
-        username: value,
-        password: password,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
-  return (
-    <div className="container">
-      <Button
-        text="Login"
-        type="default"
-        stylingMode="outlined"
-        onClick={Clickhandler}
-      />
-    </div>
-  );
+const baseURL = "https://api-portal.saeedsafaee.ir/Account/Login";
+
+
+async function axiosPost(url, postData, contenttype) {
+  const retval = { status: 0, content: null };
+
+  const { data } = await axios.post(baseURL, postData).catch( (error)=> {
+    console.log(error);
+  });
+  console.log(data);
+  retval.status = data.status;
+  if (data.status === 1) {
+    retval.content = data.content;
+  }
+
+  return retval;
 }
+
+export { baseURL, axiosPost };

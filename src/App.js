@@ -1,21 +1,22 @@
-import 'devextreme/dist/css/dx.common.css';
-import 'devextreme/dist/css/dx.light.css';
-import './App.css';
-import Grid from './Components/DataGrid/DataGrid';
-import Buttons from './Components/buttons/Buttons';
-import Login from './Pages/Login/login';
-import Indicators from './Components/Indicators/Indicator';
-import Textbox from './Components/TextBox/textbox';
-import TextBoxPassword from './Components/TextBox(password)/textbox(password)';
-import ToastComponent from './Components/Toasts/toast';
-import PostData from './managers/postData';
-import GetData from './managers/getData';
+import "devextreme/dist/css/dx.common.css";
+import "devextreme/dist/css/dx.light.css";
+import "./App.css";
+import Grid from "./Components/DataGrid/DataGrid";
+import Login from "./Pages/Login/login";
+import Indicators from "./Components/Indicators/Indicator";
+import Textbox from "./Components/textBox/TextBox";
+import PostData from "./managers/postData";
+import GetData from "./managers/getData";
+import { ToastProvider } from "./Components/Toasts/utils/toast/toastProvider";
 function App() {
   return (
     <div>
       {/* <Grid/> */}
       {/* <Buttons/> */}
-      <Login/>
+      <ToastProvider>
+        <Login />
+      </ToastProvider>
+
       {/* <Indicators/> */}
       {/* <Textbox/> */}
       {/* <TextBoxPassword/> */}
